@@ -1,6 +1,6 @@
 # bunkai struct
 
-All-in-one library to parse binary structure written for [ptrlib](https://github.com/ptr-yudai/bunkai_struct).
+All-in-one library to parse binary structure written for [ptrlib](https://github.com/ptr-yudai/ptrlib).
 
 ## Usage
 
@@ -29,4 +29,6 @@ my_struct = 'MyStruct' <= Struct(
 )
 
 print(my_struct.parse(data))
+
+# --> {'magic': 3735928559, 'name': [102, 105, 122, 122, 98, 117, 122, 122], 'version': {'major': 1, 'minor': 0, 'is_beta': 1}, 'children': [{'x': 'CHILD_X1', 'y': 'CHILD_Y1'}, {'x': 'CHILD_X3', 'y': 'CHILD_Y2'}]}
 ```
