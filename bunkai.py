@@ -228,7 +228,7 @@ s64be = BunkaiPrimitive(ctypes.c_long, True)
 if __name__ == '__main__':
     data  = b'\xde\xad\xbe\xef' # magic
     data += b'fizzbuzz\0'       # name
-    data += b'\x01\x27'             # version
+    data += b'\x27\x01'         # version
     data += b'\x11\xf0' + b'\x33\xf1' # children
     my_struct = 'MyStruct' <= Struct(
         'magic' <= u32be,
